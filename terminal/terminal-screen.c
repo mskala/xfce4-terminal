@@ -1915,25 +1915,6 @@ terminal_screen_get_working_directory (TerminalScreen *screen)
 }
 
 
-
-/**
- * terminal_screen_set_working_directory:
- * @screen    : A #TerminalScreen.
- * @directory :
- **/
-void
-terminal_screen_set_working_directory (TerminalScreen *screen,
-                                       const gchar    *directory)
-{
-  terminal_return_if_fail (TERMINAL_IS_SCREEN (screen));
-  terminal_return_if_fail (directory != NULL);
-
-  g_free (screen->working_directory);
-  screen->working_directory = g_strdup (directory);
-}
-
-
-
 /**
  * terminal_screen_set_hold:
  * @screen : A #TerminalScreen.

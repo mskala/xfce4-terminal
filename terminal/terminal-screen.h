@@ -67,8 +67,6 @@ void         terminal_screen_force_resize_window          (TerminalScreen *scree
 gchar       *terminal_screen_get_title                    (TerminalScreen *screen);
 
 const gchar *terminal_screen_get_working_directory        (TerminalScreen *screen);
-void         terminal_screen_set_working_directory        (TerminalScreen *screen,
-                                                           const gchar    *directory);
 
 void         terminal_screen_set_hold                     (TerminalScreen *screen,
                                                            gboolean        hold);

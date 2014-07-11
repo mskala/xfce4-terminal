@@ -1231,17 +1231,9 @@ static void
 terminal_window_action_new_tab (GtkAction       *action,
                                 TerminalWindow  *window)
 {
-  const gchar *directory;
   GtkWidget   *terminal;
 
   terminal = g_object_new (TERMINAL_TYPE_SCREEN, NULL);
-
-  if (G_LIKELY (window->active != NULL))
-    {
-      directory = terminal_screen_get_working_directory (window->active);
-      terminal_screen_set_working_directory (TERMINAL_SCREEN (terminal),
-                                             directory);
-    }
 
   terminal_window_add (window, TERMINAL_SCREEN (terminal));
   terminal_screen_launch_child (TERMINAL_SCREEN (terminal));
